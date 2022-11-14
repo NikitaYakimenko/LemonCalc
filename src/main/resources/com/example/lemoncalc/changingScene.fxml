@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lemoncalc.Controller">
+   <children>
+      <Button layoutX="43.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMainScene" text="к расчету">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="21.0" prefHeight="17.0" prefWidth="598.0" text="Загрузка на 1 т" textAlignment="CENTER" />
+      <Label layoutX="37.0" layoutY="92.0" text="Вода" />
+      <Label fx:id="recipeWaterLabel" layoutX="96.0" layoutY="93.0" />
+      <TextField fx:id="changeRecipeWater" layoutX="134.0" layoutY="88.0" onAction="#changeRecipeWater" />
+      <Label fx:id="changedRecipeWater" layoutX="405.0" layoutY="86.0" prefHeight="30.0" prefWidth="173.0" />
+      <Button layoutX="314.0" layoutY="87.0" mnemonicParsing="false" onAction="#changeRecipeWater" text="изменить">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="223.0" layoutY="340.0" mnemonicParsing="false" onAction="#refreshRecipes" text="обновить рецептуры">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
