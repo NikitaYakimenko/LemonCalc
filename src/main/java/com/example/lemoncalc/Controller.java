@@ -64,6 +64,7 @@ public class Controller implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+        System.out.println(now + " Открыт экран рецепутр");
     }
     public void logOut() {
         Stage stage = (Stage) mainScene.getScene().getWindow();
@@ -105,6 +106,7 @@ public class Controller implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+        System.out.println(now + " Открыт экран расчета");
     }
     LocalDateTime now = LocalDateTime.now();
 }
