@@ -38,13 +38,13 @@ public class Controller implements Initializable {
     }
     public void selectProduct (ActionEvent event) {
         String selectedProduct = productSelection.getValue();
-        System.out.println(now + " Выбрана продукция " + selectedProduct);
+        System.out.println(LocalDateTime.now() + " Выбрана продукция " + selectedProduct);
     }
     public void selectAmountAndCalculate () {
         boolean amountInputCorrect = true;
         try {
             requestedAmount = Double.parseDouble(amountTextField.getText());
-            System.out.println(now + " Выбрано количество продукции " + requestedAmount + " т");
+            System.out.println(LocalDateTime.now() + " Выбрано количество продукции " + requestedAmount + " т");
         }
         catch (NumberFormatException e) {
             amountInputAlert.setText("Введите целую и дробную часть через точку");
@@ -64,12 +64,12 @@ public class Controller implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
-        System.out.println(now + " Открыт экран рецепутр");
+        System.out.println(LocalDateTime.now() + " Открыт экран рецепутр");
     }
     public void logOut() {
         Stage stage = (Stage) mainScene.getScene().getWindow();
         stage.close();
-        System.out.println(now + " Приложение закрыто");
+        System.out.println(LocalDateTime.now() + " Приложение закрыто");
     }
     //экран изменения рецептуры
     @FXML
@@ -83,7 +83,7 @@ public class Controller implements Initializable {
     private Label changedRecipeWater;
     public void refreshRecipes () {
         recipeWaterLabel.setText(recipeWater + " т");
-        System.out.println(now + " Рецептуры обновлены");
+        System.out.println(LocalDateTime.now() + " Рецептуры обновлены");
     }
     public void changeRecipeWater () {
         boolean recipeInputCorrect = true;
@@ -96,7 +96,7 @@ public class Controller implements Initializable {
         }
         if (recipeInputCorrect) {
             changedRecipeWater.setText("рецептура изменена");
-            System.out.println(now + " Изменена рецептура воды " + recipeWater + " т");
+            System.out.println(LocalDateTime.now() + " Изменена рецептура воды " + recipeWater + " т");
         }
     }
 
@@ -106,7 +106,6 @@ public class Controller implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
-        System.out.println(now + " Открыт экран расчета");
+        System.out.println(LocalDateTime.now() + " Открыт экран расчета");
     }
-    LocalDateTime now = LocalDateTime.now();
 }
